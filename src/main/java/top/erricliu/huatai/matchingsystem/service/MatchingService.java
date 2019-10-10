@@ -41,7 +41,10 @@ public class MatchingService {
                 buyList.offerBill(buyBill);
                 return;
             }
-            clearingService.clearBuy(buyBill, saleList, res);
+            if(!clearingService.clearBuy(buyBill, saleList, res)){
+                buyList.offerBill(buyBill);
+                return;
+            }
         }
     }
 
@@ -54,7 +57,10 @@ public class MatchingService {
                 saleList.offerBill(saleBill);
                 return;
             }
-            clearingService.clearSale(saleBill, buyList, res);
+            if (!clearingService.clearSale(saleBill, buyList, res)){
+                saleList.offerBill(saleBill);
+                return;
+            }
         }
     }
 

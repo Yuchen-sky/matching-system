@@ -7,17 +7,21 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.listener.PatternTopic;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
-import top.erricliu.huatai.matchingsystem.service.EnduranceService;
+import top.erricliu.huatai.matchingsystem.service.PersistenceService;
 
+/**
+ * @author liubi
+ * @date 2019-10-08 16:52
+ **/
 
 @Configuration
-    @AutoConfigureAfter({EnduranceService.class})
+    @AutoConfigureAfter({PersistenceService.class})
     public class SubscriberConfig {
-
         // 消息监听适配器，注入接受消息方法，输入方法名字 反射方法
         @Bean
-        public MessageListenerAdapter getMessageListenerAdapter(EnduranceService enduranceService) {
-            return new MessageListenerAdapter(enduranceService, "messageGetAndEndurance"); //当没有继承MessageListener时需要写方法名字
+        public MessageListenerAdapter getMessageListenerAdapter(PersistenceService persistenceService) {
+            return new MessageListenerAdapter(persistenceService, "messageGetAndPersistence");
+            //当没有继承MessageListener时需要写方法名字
         }
 
         // 创建消息监听容器

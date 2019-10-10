@@ -1,7 +1,6 @@
 package top.erricliu.huatai.matchingsystem.entity;
 
 import lombok.Data;
-import lombok.ToString;
 
 /**
  * @author liubi

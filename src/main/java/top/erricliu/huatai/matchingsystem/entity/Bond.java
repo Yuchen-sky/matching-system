@@ -2,7 +2,6 @@ package top.erricliu.huatai.matchingsystem.entity;
 
 import lombok.Data;
 import top.erricliu.huatai.matchingsystem.Util.GsonUtil;
-import top.erricliu.huatai.matchingsystem.repo.UserRepo;
 
 /**
  * @author liubi

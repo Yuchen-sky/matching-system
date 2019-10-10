@@ -1,11 +1,14 @@
-package top.erricliu.huatai.matchingsystem.Mapper;
+package top.erricliu.huatai.matchingsystem.mapper;
 
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 import top.erricliu.huatai.matchingsystem.entity.transaction.Transaction;
 
 import java.util.List;
-
+/**
+ * @author liubi
+ * @date 2019-10-08 16:52
+ **/
 @Mapper
 @Repository
 public interface TransactionMapper {

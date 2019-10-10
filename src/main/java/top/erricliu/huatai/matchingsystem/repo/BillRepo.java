@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 import top.erricliu.huatai.matchingsystem.Util.GsonUtil;
 import top.erricliu.huatai.matchingsystem.entity.billList.BuyBillList;
 import top.erricliu.huatai.matchingsystem.entity.billList.SaleBillList;
-import top.erricliu.huatai.matchingsystem.entity.transaction.Transaction;
 
 import java.util.HashMap;
 import java.util.Map;
